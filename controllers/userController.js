@@ -17,7 +17,7 @@ module.exports = {
       const user = await User.findOne({ _id: req.params.userId }).select('-__v');
 
       if (!user) {
-        return res.status(404).json({ message: 'No user with that ID' });
+        return res.status(404).json({ message: 'No User with that ID' });
       }
       res.json(user);
     } catch (err) {
